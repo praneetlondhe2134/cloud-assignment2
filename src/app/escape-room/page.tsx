@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-// --- Header component ---
+
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
@@ -95,14 +95,14 @@ function Header() {
   );
 }
 
-// --- Escape Room Page ---
+
 export default function EscapeRoomPage() {
   const [timer, setTimer] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const [stage, setStage] = useState(1);
   const [input, setInput] = useState("");
 
-  // Timer logic
+ 
   useEffect(() => {
     let interval: NodeJS.Timeout | null = null;
     if (isRunning) {
@@ -131,7 +131,7 @@ export default function EscapeRoomPage() {
   return (
     <div
       style={{
-        backgroundImage: "url('/escape-room-bg.jpg')", // place your image in /public
+        backgroundImage: "url('/escape-room-bg.jpg')", 
         backgroundSize: "cover",
         minHeight: "100vh",
         color: "white",

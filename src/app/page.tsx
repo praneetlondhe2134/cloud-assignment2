@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-// --- Header component ---
+
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
@@ -97,7 +97,7 @@ function Header() {
   );
 }
 
-// --- Home page ---
+
 export default function HomePage() {
   return (
     <div style={{ fontFamily: "Arial, sans-serif" }}>

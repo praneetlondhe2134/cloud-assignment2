@@ -10,7 +10,10 @@ generator client {
 model EscapeRoom {
   id          Int      @id @default(autoincrement())
   title       String
-  description String
-  difficulty  String
+  description String?
+  difficulty  String?
+  payload     Json?
   createdAt   DateTime @default(now())
 }
+
+
