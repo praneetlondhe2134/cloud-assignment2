@@ -1,9 +1,9 @@
-// src/app/api/escape-room/route.ts
+
 import { Prisma } from "@prisma/client";
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma"; // adjust alias if not using tsconfig paths
+import { prisma } from "@/lib/prisma"; 
 
-// GET /api/escape-room  -> list all escape rooms
+
 export async function GET() {
   try {
     const rooms = await prisma.escapeRoom.findMany({ orderBy: { createdAt: "desc" }});
@@ -14,11 +14,11 @@ export async function GET() {
   }
 }
 
-// POST /api/escape-room -> create a new escape room
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    // validate minimal fields
+    
     if (!body.title) {
       return NextResponse.json({ error: "title is required" }, { status: 400 });
     }
